@@ -47,8 +47,8 @@ class Logic(QMainWindow):
 # this code just showed who is the winner
         if self.votes["Jane"] > self.votes["Jone"]:
                 self.winner = "Jane"
-        elif self.votes["Jone"] > self.votes["Jane"]:
-                self.winner = "Jone"
+        elif self.votes["Jone"] > self.votes["jane"]:
+                self.winner = "jone"
 
         else:
             self.winner = "Tie"
@@ -59,14 +59,14 @@ class Logic(QMainWindow):
                 self.ui.label_5.setText("Winner is " + self.winner)
 
 
-            total = self.votes["Jane"] + self.votes["Jone"]
+            total = self.votes["jane"] + self.votes["jone"]
             if total > 0:
-                percent_Jane = round((self.votes["Jane"] / total) * 100, 2)
-                percent_Jone = round((self.votes["Jone"] / total) * 100, 2)
+                percent_jane = round((self.votes["jane"] / total) * 100, 2)
+                percent_jone = round((self.votes["jone"] / total) * 100, 2)
 
                 result = (
-                    f"Jane:{self.votes['Jane']} votes({percent_Jane}%)\n"
-                    f"Jone:{self.votes['Jone']} votes ({percent_Jone}%)"
+                    f"jane:{self.votes['jane']} votes({percent_jane}%)\n"
+                    f"jone:{self.votes['jone']} votes ({percent_jone}%)"
                 )
 
                 if hasattr(self.ui, "label_6"):
