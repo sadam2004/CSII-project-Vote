@@ -45,28 +45,28 @@ class Logic(QMainWindow):
             f.write(f"{user_id}\n")
         self.ui.label_4.setText(f"Voted for {self.candidate}")
 # this code just showed who is the winner
-        if self.votes["jane"] > self.votes["jone"]:
-                self.winner = "jane"
-        elif self.votes["jone"] > self.votes["jane"]:
-                self.winner = "jone"
+        if self.votes["Jane"] > self.votes["Jone"]:
+                self.winner = "Jane"
+        elif self.votes["Jone"] > self.votes["Jane"]:
+                self.winner = "Jone"
 
         else:
             self.winner = "Tie"
         if hasattr(self.ui, "label_5"):
-            if self.winner == "tie":
+            if self.winner == "Tie":
                 self.ui.label_5.setText("Tie")
             else:
                 self.ui.label_5.setText("Winner is " + self.winner)
 
 
-            total = self.votes["jane"] + self.votes["jone"]
+            total = self.votes["Jane"] + self.votes["Jone"]
             if total > 0:
-                percent_jane = round((self.votes["jane"] / total) * 100, 2)
-                percent_jone = round((self.votes["jone"] / total) * 100, 2)
+                percent_Jane = round((self.votes["Jane"] / total) * 100, 2)
+                percent_Jone = round((self.votes["Jone"] / total) * 100, 2)
 
                 result = (
-                    f"jane:{self.votes['jane']} votes({percent_jane}%)\n"
-                    f"jone:{self.votes['jone']} votes ({percent_jone}%)"
+                    f"Jane:{self.votes['Jane']} votes({percent_Jane}%)\n"
+                    f"Jone:{self.votes['Jone']} votes ({percent_Jone}%)"
                 )
 
                 if hasattr(self.ui, "label_6"):
